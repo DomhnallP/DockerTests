@@ -8,7 +8,7 @@ q = Queue(connection=c)
 
 t0 = time.time()
 jobs = []
-for i in range(4):
+for i in range(10):
     jobs.append(q.enqueue(tasks.helloWorld))
 while any(not job.is_finished for job in jobs):
 

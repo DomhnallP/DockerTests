@@ -1,5 +1,11 @@
 import socket
+import requests
+
 REDIS_HOST = '18.188.58.132'
 
 def helloWorld():
-    return 'hello World, from node ' + socket.gethostname()
+    r = requests.get("http://169.254.169.254/latest/dynamic/instance-identity/document")
+    response_json = r.json()
+    region = response_json.get('region')
+    instance_id = response_json.get('instanceId')
+    return 'Wello World, from node ' + instance_id
