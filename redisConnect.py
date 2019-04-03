@@ -8,10 +8,12 @@ q = Queue(connection=c)
 
 t0 = time.time()
 jobs = []
-for i in range(32):
+for i in range(4):
     jobs.append(q.enqueue(tasks.helloWorld))
 while any(not job.is_finished for job in jobs):
-    time.sleep(0.1)
-t1 = time.time()
 
+    time.sleep(2)
+t1 = time.time()
+for job in jobs:
+    print(job.return_value)
 print(t1 - t0)
