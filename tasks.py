@@ -1,6 +1,3 @@
-import rsa
-
-# hostname for the redis server
 REDIS_HOST = '18.188.58.132'
 
 def helloWorld():
