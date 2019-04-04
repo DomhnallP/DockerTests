@@ -12,7 +12,7 @@ for i in range(10):
     jobs.append(q.enqueue(tasks.helloWorld))
 while any(not job.is_finished for job in jobs):
 
-    time.sleep(2)
+    time.sleep(0.1)
 t1 = time.time()
 for job in jobs:
     print(job.return_value)
