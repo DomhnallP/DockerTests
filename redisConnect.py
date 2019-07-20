@@ -8,11 +8,12 @@ q = Queue(connection=c)
 
 t0 = time.time()
 jobs = []
-for i in range(100):
+for i in range(1000):
+    print ("Queueing Job" + str(i))
     jobs.append(q.enqueue(tasks.helloWorld))
 
 print("all jobs loaded")
-while any(!job.is_finished for job in jobs):
+while any(job.is_finished for job in jobs):
     print("computing")
     for job in jobs:
         if job.is_finished:
