@@ -1,7 +1,7 @@
 import socket
 import requests
 
-REDIS_HOST = '3.17.190.7'
+REDIS_HOST = '18.191.206.43'
 
 def helloWorld():
     r = requests.get("http://169.254.169.254/latest/dynamic/instance-identity/document")

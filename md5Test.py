@@ -10,8 +10,8 @@ def fun(message, client):
     for line in container.logs(stream=True):
         print (line.strip())
 
-client1 = docker.DockerClient(base_url='tcp://18.223.166.165:4243',  tls=False)
-client2 = docker.DockerClient(base_url='tcp://18.224.96.64:4243',  tls=False)
+client1 = docker.DockerClient(base_url='tcp://52.14.62.247:4243',  tls=False)
+client2 = docker.DockerClient(base_url='tcp://3.16.163.113:4243',  tls=False)
 messages= ["c4ca4238a0b923820dcc509a6f75849b",
             "c4ca4238a0b923820dcc509a6f758491",
             "c4ca4238a0b923820dcc509a6f75849c",
