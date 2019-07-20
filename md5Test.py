@@ -25,7 +25,7 @@ messages= ["c4ca4238a0b923820dcc509a6f75849b",
             "c4ca4238a0b923820dcc509a6f75849c",
             "c4ca4238a0b923820dcc509a6f75849d"]
 
-pool = ThreadPoolExecutor(50)
+pool = ThreadPoolExecutor(10)
 clients = [client1, client2]
 i = 0
 t1 = time.time()

@@ -12,7 +12,7 @@ for i in range(100):
     jobs.append(q.enqueue(tasks.helloWorld))
 
 print("all jobs loaded")
-while any(job.is_finished for job in jobs):
+while any(!job.is_finished for job in jobs):
     print("computing")
     for job in jobs:
         if job.is_finished:
